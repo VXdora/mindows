@@ -1,0 +1,1 @@
+qemu-system-x86_64 -bios tools\OVMF.fd fat:rw:image -m 6G
