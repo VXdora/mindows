@@ -1,1 +1,1 @@
-qemu-system-x86_64 -bios tools\OVMF.fd fat:rw:image -m 6G
+qemu-system-x86_64 -bios tools\OVMF.fd -drive file=fat:rw:image,format=raw -m 6G

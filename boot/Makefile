@@ -1,6 +1,6 @@
 ###  Compile Option  ###
 CC		= x86_64-w64-mingw32-gcc
-CFLAGS	= -O3 -Wall -Wextra -e EfiMain -nostdlib -fno-builtin -Wl,--subsystem,10 -mno-stack-arg-probe
+CFLAGS	= -O0 -Wall -Wextra -e EfiMain -nostdlib -fno-builtin -Wl,--subsystem,10 -mno-stack-arg-probe
 
 ###  Include Option  ###
 iUEFI	= -I uefi
