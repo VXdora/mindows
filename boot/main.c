@@ -16,7 +16,7 @@
 #include <IOStruct.h>
 #include <MemoryStruct.h>
 
-#define GRAPHIC_INFO    0xF00000
+#define GRAPHIC_INFO    0x100000
 #define KERNEL_ENTRY    0x110000
 
 // structure
