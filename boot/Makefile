@@ -5,7 +5,7 @@
 #
 #		@author	VXdora
 #
-#		@update mindows01b [Fix]
+#		@update mindows01b
 ##########################################################
 
 
