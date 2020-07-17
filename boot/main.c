@@ -16,8 +16,8 @@
 #include <IOStruct.h>
 #include <MemoryStruct.h>
 
-#define GRAPHIC_INFO    0xF0000
-#define KERNEL_ENTRY    0x100000
+#define GRAPHIC_INFO    0xF00000
+#define KERNEL_ENTRY    0x110000
 
 // structure
 typedef struct GraphicInfo {
@@ -58,7 +58,7 @@ EFI_STATUS EfiMain(EFI_HANDLE imageHandle, EFI_SYSTEM_TABLE *systemTable) {
 
     graphicInfo->vram    = (unsigned int *)graphic->Mode->FrameBufferBase;
     graphicInfo->width   = (unsigned short int)graphic->Mode->Info->HorizontalResolution;
-    graphicInfo->height  = (unsigned int)graphic->Mode->Info->VerticalResolution;
+    graphicInfo->height  = (unsigned short int)graphic->Mode->Info->VerticalResolution;
 
     print(L"[Success] Get Graphic Info\r\n");
 
@@ -142,7 +142,7 @@ EFI_STATUS EfiMain(EFI_HANDLE imageHandle, EFI_SYSTEM_TABLE *systemTable) {
 
     print(L"[Success] Kernel Entry\r\n");
     status = gBS->ExitBootServices(imageHandle, mapKey);
-    // __asm__("jmp    *0x00100000\n");
+    // __asm__("jmp    *0x00110000\n");
 
 
     while (1) ;
