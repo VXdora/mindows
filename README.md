@@ -48,6 +48,13 @@ $ qemu-system-x86_64 -bios tools\OVMF.fd -drive file=fat:rw:image,format=raw -m 
 
 ### mindows01b
 ・UEFIのグラフィック情報を読み込む
+
 ・UEFIを利用してカーネルファイルを読み込み
+
 ・その他，UEFIの構造体を作成
+
+### mindows02a
+・カーネルのコンパイル環境の構築
+
+・画面描画
 
