@@ -5,7 +5,7 @@
  *
  *      @author VXdora
  *
- *      @update mindows01a [New]
+ *      @update mindows01a
  ***********************************************************/
 
 #include <types.h>

@@ -5,7 +5,7 @@
  *
  *      @author VXdora
  *
- *      @update mindows01b [Fix]
+ *      @update mindows02a [Fix]
  ***************************************************/
 
 #include <types.h>
@@ -142,7 +142,7 @@ EFI_STATUS EfiMain(EFI_HANDLE imageHandle, EFI_SYSTEM_TABLE *systemTable) {
 
     print(L"[Success] Kernel Entry\r\n");
     status = gBS->ExitBootServices(imageHandle, mapKey);
-    // __asm__("jmp    *0x00110000\n");
+    __asm__("jmp    *0x00110000\n");
 
 
     while (1) ;
