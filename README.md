@@ -25,3 +25,29 @@ $ sudo apt-get install nasm
 $ sudo apt-get install qemu
 ```
 
+## コンパイル
+Linux及びWSL環境下で以下のコマンドを実行
+```
+$ make
+```
+
+## 実行
+### Windows
+run.batを実行することで，QEMUが動作する
+
+### Linux
+```
+$ qemu-system-x86_64 -bios tools\OVMF.fd -drive file=fat:rw:image,format=raw -m 6G
+```
+
+## バージョン情報
+### mindows01a
+・UEFIのプログラムを実行する
+
+・UEFIを利用して画面描画（文字）を行う
+
+### mindows01b
+・UEFIのグラフィック情報を読み込む
+・UEFIを利用してカーネルファイルを読み込み
+・その他，UEFIの構造体を作成
+

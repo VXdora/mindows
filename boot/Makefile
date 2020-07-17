@@ -1,3 +1,14 @@
+##########################################################
+#		@file	Makefile
+#
+#		@brief	bootのコンパイル規則
+#
+#		@author	VXdora
+#
+#		@update mindows01b [Fix]
+##########################################################
+
+
 ###  Compile Option  ###
 CC		= x86_64-w64-mingw32-gcc
 CFLAGS	= -O0 -Wall -Wextra -e EfiMain -nostdlib -fno-builtin -Wl,--subsystem,10 -mno-stack-arg-probe

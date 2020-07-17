@@ -53,7 +53,7 @@ EFI_STATUS EfiMain(EFI_HANDLE imageHandle, EFI_SYSTEM_TABLE *systemTable) {
     //
     EFI_GRAPHICS_OUTPUT_PROTOCOL *graphic = NULL;
     GraphicInfo *graphicInfo = (GraphicInfo *)GRAPHIC_INFO;
-    status = gBS->LocateProtocol(&gEfiGraphicsOutputProtocolGuid, NULL, (void**)&graphicInfo);
+    status = gBS->LocateProtocol(&gEfiGraphicsOutputProtocolGuid, NULL, (void**)&graphic);
     perror(status, L"[Fatal] GUI Locate Error\r\n");
 
     graphicInfo->vram    = (unsigned int *)graphic->Mode->FrameBufferBase;
