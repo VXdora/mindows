@@ -1,3 +1,12 @@
+;###################################################
+;       @file   entry.S
+;
+;       @brief  カーネルの番地を取得，メモリに書き込み
+;
+;       @author VXdora
+;
+;       @update mindows02a [New]
+;###################################################
 extern KernelMain
 global KernelStart
 
