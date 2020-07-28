@@ -1,6 +1,11 @@
 # *****************************************
-# 	kernel - Makefile
-# 	Update  develop3.1
+# 	@file	Makefile
+#
+#	@brief	kernelのMakefile
+#
+#	@author	vxdora
+#
+# 	@update mindows02a [New]
 # *****************************************
 CFLAGS = -Wall -Wextra -O0 -nodefaultlibs -nostdlib -fno-builtin -fno-common -e KernelMain
 LDFLAGS = -T kernel.ld
