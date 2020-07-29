@@ -1,13 +1,19 @@
 # *****************************************
-# 	kernel - Makefile
-# 	Update  develop3.1
+#  		@file	Makefile
+#
+# 		@brief	kernelのMakefile
+#
+# 		@author	vxdora
+#
+#  		@update mindows02b [Fix]
 # *****************************************
-CFLAGS = -Wall -Wextra -O0 -nodefaultlibs -nostdlib -fno-builtin -fno-common -e KernelMain
-LDFLAGS = -T kernel.ld
+CFLAGS = -Wall -Wextra -O0 -I include -nodefaultlibs -nostdlib -fno-builtin -fno-common -e KernelMain
+LDFLAGS = -T scripts/kernel.ld
 
-OBJS = 	entry.obj main.obj
+OBJS = 	core/entry.obj core/main.obj \
+		graphics/init.obj graphics/simple.obj
 
-kernel.bin: $(OBJS)
+kernel.bin: $(OBJS) scripts/kernel.ld
 	ld -Map kernel.map $(LDFLAGS) -o kernel.bin $+
 
 %.obj: %.c
