@@ -58,3 +58,9 @@ $ qemu-system-x86_64 -bios tools\OVMF.fd -drive file=fat:rw:image,format=raw -m 
 
 ・画面描画
 
+
+### mindows02b
+・画面情報の初期化関数を追加
+
+・基本描画関数（線，四角形，円）の追加
+
