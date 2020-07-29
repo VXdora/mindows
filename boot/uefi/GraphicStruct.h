@@ -17,7 +17,7 @@
 //      EFI_GRAPHICS_OUTPUT_PROTOCOL
 //      @brief  画面情報に関する構造体の定義
 //      @ref    UEFI.Spec 11-9
-//      @update mindows01b [New]
+//      @update mindows01b
 //
 
 typedef enum {

@@ -5,7 +5,7 @@
  *
  *      @author VXdora
  *
- *      @update mindows02a [Fix]
+ *      @update mindows02a
  ***************************************************/
 
 #include <types.h>
@@ -37,7 +37,7 @@ void perror(EFI_STATUS stat, CHAR16 *s);
 //              EFI_SYSTEM_TABLE    *systemTable
 //      @ret    EFI_STATUS      0...Success
 //      @brief  UEFIで起動し，文字列を表示
-//      @update mindows01b [Fix]
+//      @update mindows01b
 //
 
 EFI_STATUS EfiMain(EFI_HANDLE imageHandle, EFI_SYSTEM_TABLE *systemTable) {
@@ -154,7 +154,7 @@ EFI_STATUS EfiMain(EFI_HANDLE imageHandle, EFI_SYSTEM_TABLE *systemTable) {
 //      @arg    : CHAR16 *s    表示したい文字列
 //      @ret    : none
 //      @desc   : 文字列を表示する関数
-//      @update : mindows01b [New]
+//      @update : mindows01b
 //
 void print(CHAR16 *s) {
     gST->ConOut->OutputString(gST->ConOut, s);
@@ -167,7 +167,7 @@ void print(CHAR16 *s) {
 //      @ret    : none
 //      @desc   : 処理が成功した場合は，プログラムを続行し，
 //                  それ以外はエラーメッセージを表示し，中断
-//      @update : mindows01b [New]
+//      @update : mindows01b
 //
 void perror(EFI_STATUS stat, CHAR16 *s) {
     if (stat == EFI_SUCCESS)    return;     // success

@@ -20,7 +20,7 @@ typedef UINT64 EFI_VIRTUAL_ADDRESS;
 //
 //      EFI_MEMORY_TYPE
 //      @ref    UEFI.Spec 6-2
-//      @update mindows01b [New]
+//      @update mindows01b
 //
 typedef enum {
     EfiReservedMemoryType,
@@ -44,7 +44,7 @@ typedef enum {
 //
 //      EFI_MEMORY_DESCRIPTOR
 //      @ref    UEFI.Spec 6-2
-//      @update mindows01b [New]
+//      @update mindows01b
 //
 typedef struct EFI_MEMORY_DESCRIPTOR {
     UINT32 Type;

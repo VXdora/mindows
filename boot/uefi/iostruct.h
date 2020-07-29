@@ -17,7 +17,7 @@
 //      EFI_SIMPLE_TEXT_INPUT_PROTOCOL
 //      @brief  UEFIの入力に関する構造体の定義
 //      @ref    UEFI.Spec 11-3
-//      @update mindows01a [New]
+//      @update mindows01a
 //
 
 typedef struct EFI_SIMPLE_TEXT_INPUT_PROTOCOL {
@@ -31,7 +31,7 @@ typedef struct EFI_SIMPLE_TEXT_INPUT_PROTOCOL {
 //      EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL
 //      @brief  UEFIの画面出力（文字ベース）に関する構造体の定義
 //      @ref    UEFI.Spec 11-3
-//      @update mindows01a [New]
+//      @update mindows01a
 //
 
 typedef struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL {

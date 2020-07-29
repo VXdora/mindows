@@ -80,7 +80,7 @@ typedef struct EFI_RUNTIME_SERVICES {
 //
 //      Boot Services
 //      @ref    UEFI.Spec 4-4
-//      @update mindows01b [Fix]
+//      @update mindows01b
 //
 
 #define EFI_OPEN_PROTOCOL_BY_HANDLE_PROTOCOL    0x00000001
@@ -101,7 +101,7 @@ typedef struct {
 
     //    Memory Services
     //    @ref    UEFI.Spec 6-2
-    //    @update mindows01b [Fix]
+    //    @update mindows01b
     EFI_STATUS  AllocatePages;
     EFI_STATUS  FreePages;
     EFI_STATUS  (*GetMemoryMap) (
@@ -145,7 +145,7 @@ typedef struct {
 
     //    Image Services
     //    @ref    UEFI.Spec 6-4
-    //    @update mindows01b [Fix]
+    //    @update mindows01b
     EFI_STATUS  LoadImage;
     EFI_STATUS  StartImage;
     EFI_STATUS  Exit;
@@ -170,7 +170,7 @@ typedef struct {
 
     //    Open and Close Protocol Services
     //    @ref    UEFI.Spec 6-3
-    //    @update mindows01b [Fix]
+    //    @update mindows01b
     EFI_STATUS  (*OpenProtocol) (
             EFI_HANDLE  Handle,
             EFI_GUID    *Protocol,
@@ -184,7 +184,7 @@ typedef struct {
 
     //    Library Services
     //    @ref    UEFI.Spec 6-3
-    //    @update mindows01b [Fix]
+    //    @update mindows01b
     EFI_STATUS  ProtocolPerHandle;
     EFI_STATUS  LocateHandleBuffer;
     EFI_STATUS  (*LocateProtocol) (

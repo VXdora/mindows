@@ -14,7 +14,7 @@
 //
 // @brief   UEFIで共通の型
 // @ref     UEFI.Spec p23 [2.3.1]
-// @update  mindows01a [New]
+// @update  mindows01a
 //
 
 typedef char            BOOLEAN;
@@ -60,7 +60,7 @@ typedef VOID*               EFI_EVENT;
 //
 // @brief   UEFIのエラー状態を定義
 // @ref     UEFI.Spec p2347 [Appendix D]
-// @update  mindows01a [New]
+// @update  mindows01a
 //
 
 #define EFI_SUCCESS             0
