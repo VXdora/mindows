@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows02b [New]
+ *      @update mindows02b
  ************************************************/
 #include <graphics.h>
 
@@ -17,7 +17,7 @@ extern GraphicsInfo *graphicsInfo;
 //      @return :   なし
 //      @brief  :   画面情報の取得
 //      @author :   vxdora
-//      @update :   mindows02b [New]
+//      @update :   mindows02b
 //
 void InitGraphics(void) {
     graphicsInfo = (GraphicsInfo *)GRAPHICS_INFO;

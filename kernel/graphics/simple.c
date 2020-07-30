@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows02b [New]
+ *      @update mindows02c [Fix]
  **********************************************/
 #include <graphics.h>
 
@@ -22,7 +22,7 @@ extern GraphicsInfo *graphicsInfo;
 //      @return :   なし
 //      @brief  :   直線の描画(線の太さは1のみ)
 //      @author :   vxdora
-//      @update :   mindows02b [New]
+//      @update :   mindows02b
 //
 void DrawLine(
         unsigned int sx, unsigned int sy,
@@ -91,7 +91,7 @@ void DrawLine(
 //      @return :   なし
 //      @brief  :   中身が塗りつぶしてある四角形の描画
 //      @author :   vxdora
-//      @update :   mindows02b [New]
+//      @update :   mindows02b
 //
 void DrawRectangle(
         unsigned int sx, unsigned int sy,
@@ -118,7 +118,7 @@ void DrawRectangle(
 //      @return :   なし
 //      @brief  :   中身が塗りつぶしてない四角形の描画
 //      @author :   vxdora
-//      @update :   mindows02b [New]
+//      @update :   mindows02b
 //
 void DrawRectangleVoid(
         unsigned int sx, unsigned int sy,
@@ -165,7 +165,7 @@ void DrawRectangleVoid(
 //      @return :   なし
 //      @brief  :   中身の塗りつぶされた円の描画
 //      @author :   vxdora
-//      @update :   mindows02b [New]
+//      @update :   mindows02b
 //
 void DrawCircle(unsigned int cx, unsigned int cy, unsigned int r, unsigned int color) {
     unsigned int x, y;
@@ -178,4 +178,53 @@ void DrawCircle(unsigned int cx, unsigned int cy, unsigned int r, unsigned int c
     }
 }
 
+// フォントの読み込み
+#include "font.h"
 
+//
+//      DrawCharacter
+//      @args   :   sx      - 描画する文字のx座標
+//                  sy      - 描画する文字のy座標
+//                  ch      - 描画する文字
+//                  color   - 描画する文字の色
+//      @return :   なし
+//      @brief  :   (sx, sy)から文字を描画する（英数字のみ）
+//      @author :   vxdora
+//      @update :   mindows02c [New]
+//
+void DrawChar(unsigned int sx, unsigned int sy, unsigned char ch, unsigned int color) {
+    unsigned int x, y, idx, flag;
+
+    for (y = 0; y < 16; y++) {
+        idx = _fonts[ch - 0x20][y];         // y行目を取得
+        flag = 0x80;
+
+        for (x = 0; x < 8; x++) {
+            if ((sx + x) < graphicsInfo->width && (sy + y) < graphicsInfo->height      // 画面内
+                    && (idx & flag)) {                                                  // 1ならば
+                graphicsInfo->vram[(sy + y) * graphicsInfo->width + (sx + x)] = color;
+            }
+            flag = flag >> 1;
+        }
+    }
+}
+
+//
+//      DrawString
+//      @args   :   sx      - 描画する文字のx座標
+//                  sy      - 描画する文字のy座標
+//                  str     - 描画する文字列
+//                  color   - 描画する文字の色
+//      @return :   なし
+//      @brief  :   (sx, sy)から文字列を描画（英数字のみ）
+//      @author :   vxdora
+//      @update :   mindows02c [New]
+//
+void DrawString(unsigned int sx, unsigned int sy, unsigned char *str, unsigned int color) {
+    unsigned int i = 0;
+    do {
+        DrawChar(sx + i*9, sy, *str, color);
+        i++;
+        str++;
+    } while(*str);
+}
