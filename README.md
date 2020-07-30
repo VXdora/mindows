@@ -64,3 +64,7 @@ $ qemu-system-x86_64 -bios tools\OVMF.fd -drive file=fat:rw:image,format=raw -m 
 
 ・基本描画関数（線，四角形，円）の追加
 
+### mindows02c
+・フォントの追加（英数字のみ）
+
+・文字列描画関数の追加
