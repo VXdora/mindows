@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows02b [New]
+ *      @update mindows02c [Fix]
  *********************************************/
 
 #ifndef __GRAPHICS__
@@ -38,5 +38,12 @@ void DrawRectangleVoid(
 void DrawCircle(
         unsigned int cx, unsigned int cy,
         unsigned int r, unsigned int color);
+
+void DrawChar(
+        unsigned int sx, unsigned int sy,
+        unsigned char ch, unsigned int color);
+void DrawString(
+        unsigned int sx, unsigned int sy,
+        unsigned char *str, unsigned int color);
 #endif  // __GRAPHICS__
 
