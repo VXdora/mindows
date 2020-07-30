@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows02b [New]
+ *      @update mindows02b
  *******************************************/
 
 // graphics
