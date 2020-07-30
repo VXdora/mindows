@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows02b [fix]
+ *      @update mindows02c [Fix]
  ******************************************************/
 
 #include <graphics.h>
@@ -22,6 +22,10 @@ int KernelMain() {
     DrawCircle(100, 100, 30, 0x00FF00);
     DrawLine(100, 50, 50, 100, 1, 0xFFFFFF);
     DrawLine(30, 100, 1, 100, 1, 0xFFFFFF);
+
+    DrawString(5, 170, (unsigned char *)"Hello, World!", 0xFFFFFF);
+    // 画面外の挙動
+    DrawString(740, 200, (unsigned char *)"Hello World!", 0xFFFFFF);
 
     while (1);
     return 0;
