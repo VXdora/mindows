@@ -75,3 +75,6 @@ $ qemu-system-x86_64 -bios tools\OVMF.fd -drive file=fat:rw:image,format=raw -m 
 ### mindows03a
 ・GDTを初期化する機能を追加
 
+### mindows03b
+・割り込み機能（一部）の追加
+
