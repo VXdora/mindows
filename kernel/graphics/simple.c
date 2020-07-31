@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows02c [Fix]
+ *      @update mindows02c
  **********************************************/
 #include <graphics.h>
 
@@ -190,7 +190,7 @@ void DrawCircle(unsigned int cx, unsigned int cy, unsigned int r, unsigned int c
 //      @return :   なし
 //      @brief  :   (sx, sy)から文字を描画する（英数字のみ）
 //      @author :   vxdora
-//      @update :   mindows02c [New]
+//      @update :   mindows02c
 //
 void DrawChar(unsigned int sx, unsigned int sy, unsigned char ch, unsigned int color) {
     unsigned int x, y, idx, flag;
@@ -218,7 +218,7 @@ void DrawChar(unsigned int sx, unsigned int sy, unsigned char ch, unsigned int c
 //      @return :   なし
 //      @brief  :   (sx, sy)から文字列を描画（英数字のみ）
 //      @author :   vxdora
-//      @update :   mindows02c [New]
+//      @update :   mindows02c
 //
 void DrawString(unsigned int sx, unsigned int sy, unsigned char *str, unsigned int color) {
     unsigned int i = 0;

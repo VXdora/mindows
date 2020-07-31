@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows02c [New]
+ *      @update mindows02c
  ***************************************************/
 
 #ifndef __GRAPHIC_FONT__
@@ -17,7 +17,7 @@
 //                  英数字のみ
 //                  30日自作OSのフォントを流用
 //      @author :   vxdora
-//      @update :   mindows02c [New]
+//      @update :   mindows02c
 //
 
 static char _fonts[95][0x10] = {
