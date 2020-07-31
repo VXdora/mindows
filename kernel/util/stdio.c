@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows02d [New]
+ *      @update mindows02d
  ************************************************/
 
 #include <stdarg.h>
@@ -27,7 +27,7 @@
 //                        f f i
 //                            g
 //      @author :   vxdora
-//      @update :   mindows02d [New]
+//      @update :   mindows02d
 //
 void value2str(
         ATYPE val,
@@ -135,7 +135,7 @@ void value2str(
 //                      c - 文字
 //                                  etc...
 //      @author :   vxdora
-//      @update :   mindows02d [New]
+//      @update :   mindows02d
 //
 unsigned int sprintf(unsigned char *s, const unsigned char *t, ...) {
     unsigned char len = 0, ret = 0;

@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows02d [New]
+ *      @update mindows02d
  *******************************************/
 
 #include <util.h>
@@ -19,7 +19,7 @@
 //      @brief  :   メモリをs番地から
 //                  値cでn番目までクリアする
 //      @author :   vxdora
-//      @update :   mindows02d [New]
+//      @update :   mindows02d
 //
 void *memset(void *s, unsigned char c, unsigned int n) {
     unsigned char *tmp = s;
@@ -37,7 +37,7 @@ void *memset(void *s, unsigned char c, unsigned int n) {
 //      @return :   文字列の長さ
 //      @brief  :   文字列の長さを返す
 //      @author :   vxdora
-//      @update :   mindows02d [New]
+//      @update :   mindows02d
 //
 unsigned int strlen(unsigned char *s) {
     unsigned int i = 0;
@@ -54,7 +54,7 @@ unsigned int strlen(unsigned char *s) {
 //                  > 0 - sのほうが後にくる
 //      @brief  :   文字列を比較する
 //      @author :   vxdora
-//      @update :   mindows02d [New]
+//      @update :   mindows02d
 //
 int strcmp(unsigned char *s, unsigned char *t) {
     int i = 0;
@@ -78,7 +78,7 @@ int strcmp(unsigned char *s, unsigned char *t) {
 //                  > 0 - sのほうが後にくる
 //      @brief  :   n文字目までの文字列を比較する
 //      @author :   vxdora
-//      @update :   mindows02d [New]
+//      @update :   mindows02d
 //
 int strncmp(unsigned char *s, unsigned char *t, unsigned int n) {
     int i, ret = 0;
@@ -98,7 +98,7 @@ int strncmp(unsigned char *s, unsigned char *t, unsigned int n) {
 //      @return :   コピーした文字列長
 //      @brief  :   文字列tをsへコピーする
 //      @author :   vxdora
-//      @update :   mindows02d [New]
+//      @update :   mindows02d
 //
 unsigned int strcpy(unsigned char *s, unsigned char *t) {
     unsigned int ret = 0x00;

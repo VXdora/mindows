@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows02d [New]
+ *      @update mindows02d
  ********************************************/
 
 #include <util.h>
@@ -17,7 +17,7 @@
 //                  0   - その他
 //      @brief  :   文字が大文字かを判定
 //      @author :   vxdora
-//      @update :   mindows02d [New]
+//      @update :   mindows02d
 //
 unsigned char isupper(unsigned char ch) {
     if ('A' <= ch && ch <= 'Z')
@@ -32,7 +32,7 @@ unsigned char isupper(unsigned char ch) {
 //                  0   - その他
 //      @brief  :   文字が小文字かを判定
 //      @author :   vxdora
-//      @update :   mindows02d [New]
+//      @update :   mindows02d
 //
 unsigned char islower(unsigned char ch) {
     if ('a' <= ch && ch <= 'z')
@@ -47,7 +47,7 @@ unsigned char islower(unsigned char ch) {
 //                  0   - その他
 //      @brief  :   文字が英字かを判定
 //      @author :   vxdora
-//      @update :   mindows02d [New]
+//      @update :   mindows02d
 //
 unsigned char isalpha(unsigned char ch) {
     if (islower(ch) || isupper(ch))
@@ -62,7 +62,7 @@ unsigned char isalpha(unsigned char ch) {
 //                  0   - その他
 //      @brief  :   文字が数字かを判定
 //      @author :   vxdora
-//      @update :   mindows02d [New]
+//      @update :   mindows02d
 //
 unsigned char isdigit(unsigned char ch) {
     if ('0' <= ch && ch <= '9')
@@ -77,7 +77,7 @@ unsigned char isdigit(unsigned char ch) {
 //                  0   - その他
 //      @brief  :   文字が英数字かを判定
 //      @author :   vxdora
-//      @update :   mindows02d [New]
+//      @update :   mindows02d
 //
 unsigned char isalnum(unsigned char ch) {
     if (isalpha(ch) || isdigit(ch))
