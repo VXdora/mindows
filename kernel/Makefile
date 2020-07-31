@@ -5,13 +5,14 @@
 #
 # 		@author	vxdora
 #
-#  		@update mindows02d [Fix]
+#  		@update mindows02a [Fix]
 # *****************************************
 CFLAGS = -Wall -Wextra -O0 -I include -nodefaultlibs -nostdlib -fno-builtin -fno-common -e KernelMain
 LDFLAGS = -T scripts/kernel.ld
 
 OBJS = 	core/entry.obj core/main.obj \
 		graphics/init.obj graphics/simple.obj \
+		memory/gdtidt.obj memory/asm_gdtidt.obj \
 		util/ctype.obj util/string.obj util/stdio.obj
 
 kernel.bin: $(OBJS) scripts/kernel.ld
