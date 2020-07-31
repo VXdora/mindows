@@ -71,3 +71,7 @@ $ qemu-system-x86_64 -bios tools\OVMF.fd -drive file=fat:rw:image,format=raw -m 
 
 ### mindows02d
 ・文字列操作関連の機能を追加
+
+### mindows03a
+・GDTを初期化する機能を追加
+
