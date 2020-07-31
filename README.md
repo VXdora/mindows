@@ -68,3 +68,6 @@ $ qemu-system-x86_64 -bios tools\OVMF.fd -drive file=fat:rw:image,format=raw -m 
 ・フォントの追加（英数字のみ）
 
 ・文字列描画関数の追加
+
+### mindows02d
+・文字列操作関連の機能を追加
