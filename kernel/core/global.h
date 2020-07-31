@@ -5,8 +5,12 @@
  *
  *      @author vxdora
  *
- *      @update mindows02b
+ *      @update mindows03a [Fix]
  *******************************************/
 
 // graphics
 GraphicsInfo *graphicsInfo;
+
+// memory
+SEGMENT_DESCRIPTOR *GDT = (SEGMENT_DESCRIPTOR *)0x900;
+
