@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows02c [Fix]
+ *      @update mindows02c
  *********************************************/
 
 #ifndef __GRAPHICS__
