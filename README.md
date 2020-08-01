@@ -83,3 +83,9 @@ $ qemu-system-x86_64 -bios tools\OVMF.fd -drive file=fat:rw:image,format=raw -m 
 
 ### mindows04a
 ・アセンブリ専用の機能を追加
+
+### mindows04b
+・PICの初期化
+
+・タイマ割り込みの追加
+
