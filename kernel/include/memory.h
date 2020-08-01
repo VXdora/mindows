@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows03b [Fix]
+ *      @update mindows03c [Fix]
  *********************************************/
 
 #ifndef __MEMORY__
@@ -37,9 +37,45 @@ void LoadIdt(void);
 
 // asm_fault.S
 void AsmEmptyHandler(void);
+void AsmDeHandler(void);
+void AsmDbHandler(void);
+void AsmNmiHandler(void);
+void AsmBpHandler(void);
+void AsmOfHandler(void);
+void AsmBrHandler(void);
+void AsmUdHandler(void);
+void AsmNmHandler(void);
+void AsmDfHandler(void);
+void AsmTsHandler(void);
+void AsmNpHandler(void);
+void AsmSsHandler(void);
+void AsmGpHandler(void);
+void AsmPfHandler(void);
+void AsmMfHandler(void);
+void AsmAcHandler(void);
+void AsmMcHandler(void);
+void AsmXmHandler(void);
 
 // fault.c
 void EmptyHandler(void);
+void DeHandler(void);
+void DbHandler(void);
+void NmiHandler(void);
+void BpHandler(void);
+void OfHandler(void);
+void BrHandler(void);
+void UdHandler(void);
+void NmHandler(void);
+void DfHandler(void);
+void TsHandler(void);
+void NpHandler(void);
+void SsHandler(void);
+void GpHandler(void);
+void PfHandler(void);
+void MfHandler(void);
+void AcHandler(void);
+void McHandler(void);
+void XmHandler(void);
 
 #endif  // __MEMORY__
 
