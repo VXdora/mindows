@@ -5,7 +5,7 @@
  *
  *      @update vxdora
  *
- *      @update mindows03c [Fix]
+ *      @update mindows03c
  ********************************************/
 
 #include <memory.h>
@@ -19,7 +19,7 @@ extern GraphicsInfo graphicsInfo;
 //      @return :   なし
 //      @brief  :   意図しない例外の捕捉
 //      @author :   vxdora
-//      @update :   mindows03c [Fix]
+//      @update :   mindows03c
 //
 void EmptyHandler(void) {
 	DrawRectangle(3, 3, 150, 40, 0x000000);

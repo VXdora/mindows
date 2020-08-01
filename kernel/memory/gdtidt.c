@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows03c [Fix]
+ *      @update mindows03c
  *********************************************/
 
 #include <memory.h>
@@ -34,7 +34,7 @@ void InitGdt(void) {
 //      @return :   なし
 //      @brief  ;   IDTの初期化
 //      @author :   vxdora
-//      @update :   mindows03c [Fix]
+//      @update :   mindows03c
 //
 void InitIdt(void) {
     unsigned int i;
@@ -59,7 +59,7 @@ void InitIdt(void) {
     IDT[0x11] = MakeGateDescriptor((unsigned long long)AsmAcHandler);
     IDT[0x12] = MakeGateDescriptor((unsigned long long)AsmMcHandler);
     IDT[0x13] = MakeGateDescriptor((unsigned long long)AsmXmHandler);
-	
+
     LoadIdt();
 }
 
