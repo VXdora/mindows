@@ -91,3 +91,8 @@ $ qemu-system-x86_64 -bios tools\OVMF.fd -drive file=fat:rw:image,format=raw -m 
 
 ### mindows04c
 ・キーボード割り込みの追加
+
+### mindows04d
+・マウス割り込みの追加
+
+・マウス描画機能の追加
