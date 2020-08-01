@@ -5,10 +5,12 @@
  *
  *      @author vxdora
  *
- *      @update mindows03c
+ *      @update mindows04b [Fix]
  *********************************************/
 
 #include <memory.h>
+#include <device.h>
+#include <util.h>
 
 extern SEGMENT_DESCRIPTOR   *GDT;
 extern GATE_DESCRIPTOR      *IDT;
@@ -34,7 +36,7 @@ void InitGdt(void) {
 //      @return :   なし
 //      @brief  ;   IDTの初期化
 //      @author :   vxdora
-//      @update :   mindows03c
+//      @update :   mindows04b [Fix]
 //
 void InitIdt(void) {
     unsigned int i;
@@ -60,6 +62,8 @@ void InitIdt(void) {
     IDT[0x12] = MakeGateDescriptor((unsigned long long)AsmMcHandler);
     IDT[0x13] = MakeGateDescriptor((unsigned long long)AsmXmHandler);
 
+    IDT[0x20] = MakeGateDescriptor((unsigned long long)AsmTimerHandler);
+
     LoadIdt();
 }
 
@@ -82,3 +86,25 @@ GATE_DESCRIPTOR MakeGateDescriptor(unsigned long long addr) {
     return gateDesc;
 }
 
+//
+//      InitPic
+//      @arg    :   なし
+//      @return :   なし
+//      @brief  :   PICの初期化
+//      @author :   vxdora
+//      @update :   mindows04b [New]
+//
+void InitPic(void) {
+    io_out8(PIC0_IMR, 0xFF);
+    io_out8(PIC1_IMR, 0xFF);        // すべての割り込みを不許可
+
+    io_out8(PIC0_ICW1, 0x11);
+    io_out8(PIC0_ICW2, 0x20);
+    io_out8(PIC0_ICW3, 1 << 2);
+    io_out8(PIC0_ICW4, 0x01);       // マスターPICの設定
+
+    io_out8(PIC1_ICW1, 0x11);
+    io_out8(PIC1_ICW2, 0x28);
+    io_out8(PIC1_ICW3, 2);
+    io_out8(PIC1_ICW4, 0x01);       // スレーブPICの設定
+}
