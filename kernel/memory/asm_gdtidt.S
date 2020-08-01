@@ -5,7 +5,7 @@
 ;
 ;       @author vxdora
 ;
-;       @update mindows03b [Fix]
+;       @update mindows03b
 ; ****************************************************
 
 %define _GDT    0x0900
@@ -62,7 +62,7 @@ global LoadIdt
 ;       @return :   なし
 ;       @brief  :   IDTの設定
 ;       @author :   vxdora
-;       @update :   mindows03b [New]
+;       @update :   mindows03b
 ;
 LoadIdt:
     cli
