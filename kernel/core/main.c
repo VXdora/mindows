@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows04b [Fix]
+ *      @update mindows04c [Fix]
  ******************************************************/
 
 #include <device.h>
@@ -23,8 +23,11 @@ int KernelMain() {
     InitIdt();
     InitPic();
 
+    InitTimer();
+    InitKeyboard();
+
     // PICの設定
-    io_out8(PIC0_IMR, 0xFE);        // タイマーのみ許可
+    io_out8(PIC0_IMR, 0xFC);        // タイマー，キーボードを許可
     io_out8(PIC1_IMR, 0xFF);
     io_sti();
 
@@ -32,12 +35,8 @@ int KernelMain() {
 
     DrawString(5, 30, (unsigned char *)"Hello, World!", 0xFFFFFF);
 
-    unsigned char str[256];
     while (1) {
-        sprintf(str, (unsigned char *)"TIMER : %d", timerCounter);
-        DrawRectangle(3, 3, 200, 30, 0x000000);
-        DrawString(5, 5, str, 0xFFFFFF);            // チラつく！
-
+        // メインループ
     }
     return 0;
 }
