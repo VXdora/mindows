@@ -89,3 +89,5 @@ $ qemu-system-x86_64 -bios tools\OVMF.fd -drive file=fat:rw:image,format=raw -m 
 
 ・タイマ割り込みの追加
 
+### mindows04c
+・キーボード割り込みの追加
