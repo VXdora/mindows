@@ -81,3 +81,5 @@ $ qemu-system-x86_64 -bios tools\OVMF.fd -drive file=fat:rw:image,format=raw -m 
 ### mindows03c
 ・割り込み機能（ハードウェア・例外）の追加
 
+### mindows04a
+・アセンブリ専用の機能を追加
