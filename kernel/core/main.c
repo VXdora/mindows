@@ -5,27 +5,39 @@
  *
  *      @author vxdora
  *
- *      @update mindows03c
+ *      @update mindows04b [Fix]
  ******************************************************/
 
+#include <device.h>
 #include <graphics.h>
 #include <memory.h>
 #include <util.h>
 
 #include "global.h"
 
+extern unsigned int timerCounter;
+
 int KernelMain() {
     InitGraphics();
     InitGdt();
     InitIdt();
-    DrawRectangle(0, 0, graphicsInfo->width, graphicsInfo->height, 0x000000);   // 画面を黒で塗りつぶす
+    InitPic();
 
-    // 0除算を発生させて割り込みを確認
-    // DE Handlerの表示が出たらOK
-    int x = 3 / 0;
+    // PICの設定
+    io_out8(PIC0_IMR, 0xFE);        // タイマーのみ許可
+    io_out8(PIC1_IMR, 0xFF);
+    io_sti();
+
+    DrawRectangle(0, 0, graphicsInfo->width, graphicsInfo->height, 0x000000);   // 画面を黒で塗りつぶす
 
     DrawString(5, 30, (unsigned char *)"Hello, World!", 0xFFFFFF);
 
-    while (1);
+    unsigned char str[256];
+    while (1) {
+        sprintf(str, (unsigned char *)"TIMER : %d", timerCounter);
+        DrawRectangle(3, 3, 200, 30, 0x000000);
+        DrawString(5, 5, str, 0xFFFFFF);            // チラつく！
+
+    }
     return 0;
 }
