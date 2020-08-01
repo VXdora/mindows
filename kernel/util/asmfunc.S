@@ -6,7 +6,7 @@
 ;
 ;           @author vxdora
 ;
-;           @update mindows04a [New]
+;           @update mindows04a
 ; ******************************************************
 
 global io_cli
