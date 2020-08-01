@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows04c [Fix]
+ *      @update mindows04c
  ***********************************************/
 
 #include <device.h>
