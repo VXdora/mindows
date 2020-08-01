@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows03b [Fix]
+ *      @update mindows03b
  *******************************************/
 
 // graphics
