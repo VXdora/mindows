@@ -5,11 +5,27 @@
  *
  *      @author vxdora
  *
- *      @update mindows02c
+ *      @update mindows04d [Fix]
  **********************************************/
 #include <graphics.h>
 
 extern GraphicsInfo *graphicsInfo;
+
+//
+//      DrawPoint
+//      @args   :   px      - 点を打つx座標
+//                  py      - 点を打つy座標
+//                  color   - 点の色
+//      @return :   なし
+//      @brief  :   特定の座標に点を打つ
+//      @author :   vxdora
+//      @update :   mindows04d [New]
+//
+void DrawPoint(unsigned int px, unsigned int py, unsigned int color) {
+    if (px < graphicsInfo->width && py < graphicsInfo->height) {
+        graphicsInfo->vram[py * graphicsInfo->width + px] = color;
+    }
+}
 
 //
 //      DrawRectangle
