@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows04c [Fix]
+ *      @update mindows04d [Fix]
  *******************************************************/
 
 #ifndef __DEVICE__
@@ -33,6 +33,7 @@
 // handler.S
 void AsmTimerHandler(void);
 void AsmKeyboardHandler(void);
+void AsmMouseHandler(void);
 
 // timer.c
 void InitTimer(void);
@@ -41,6 +42,19 @@ void InitTimer(void);
 void InitKeyboard(void);
 void WaitKeyboardSendReady(void);
 void KeyboardHandler(void);
+
+// mouse.c
+typedef struct MouseInfo {
+    unsigned int mx, my;        // マウス座標
+    unsigned int bt;            // ボタン検知
+} MouseInfo;
+
+void InitMouse(void);
+void MouseHandler(void);
+void PushMouseData(unsigned char data);
+void DecodeMouse(void);
+void DrawMouse(void);
+
 
 #endif  // __DEVICE__
 
