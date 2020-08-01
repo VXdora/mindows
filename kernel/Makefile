@@ -5,7 +5,7 @@
 #
 # 		@author	vxdora
 #
-#  		@update mindows03b [Fix]
+#  		@update mindows03b
 # *****************************************
 CFLAGS = -Wall -Wextra -O0 -I include -nodefaultlibs -nostdlib -fno-builtin -fno-common -e KernelMain
 LDFLAGS = -T scripts/kernel.ld
