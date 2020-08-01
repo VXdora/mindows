@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows03b [Fix]
+ *      @update mindows03c [Fix]
  ******************************************************/
 
 #include <graphics.h>
@@ -21,7 +21,7 @@ int KernelMain() {
     DrawRectangle(0, 0, graphicsInfo->width, graphicsInfo->height, 0x000000);   // 画面を黒で塗りつぶす
 
     // 0除算を発生させて割り込みを確認
-    // Empty Handlerの表示が出たらOK
+    // DE Handlerの表示が出たらOK
     int x = 3 / 0;
 
     DrawString(5, 30, (unsigned char *)"Hello, World!", 0xFFFFFF);
