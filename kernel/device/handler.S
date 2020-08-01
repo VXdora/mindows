@@ -5,11 +5,12 @@
 ;
 ;       @author vxdora
 ;
-;       @update mindows04c [Fix]
+;       @update mindows04d [Fix]
 ; **************************************************
 
 extern TimerHandler
 extern KeyboardHandler
+extern MouseHandler
 
 global AsmTimerHandler
 ;
@@ -45,7 +46,7 @@ global AsmKeyboardHandler
 ;       @return :   なし
 ;       @brief  :   キーボードの割り込みを捕捉
 ;       @author :   vxdora
-;       @update :   mindows04c [Fix]
+;       @update :   mindows04c
 ;
 AsmKeyboardHandler:
     push    rax
@@ -56,6 +57,33 @@ AsmKeyboardHandler:
     push    rsi
     push    rdi
     call    KeyboardHandler
+    pop     rdi
+    pop     rsi
+    pop     rbp
+    pop     rbx
+    pop     rdx
+    pop     rcx
+    pop     rax
+    iretq
+
+global AsmMouseHandler
+;
+;       AsmMouseHandler
+;       @arg    :   なし
+;       @return :   なし
+;       @brief  :   マウスの割り込みを捕捉
+;       @author :   vxdora
+;       @update :   mindows04d [New]
+;
+AsmMouseHandler:
+    push    rax
+    push    rcx
+    push    rdx
+    push    rbx
+    push    rbp
+    push    rsi
+    push    rdi
+    call    MouseHandler
     pop     rdi
     pop     rsi
     pop     rbp
