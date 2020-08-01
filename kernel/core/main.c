@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows04c [Fix]
+ *      @update mindows04d [Fix]
  ******************************************************/
 
 #include <device.h>
@@ -25,10 +25,11 @@ int KernelMain() {
 
     InitTimer();
     InitKeyboard();
+    InitMouse();
 
     // PICの設定
-    io_out8(PIC0_IMR, 0xFC);        // タイマー，キーボードを許可
-    io_out8(PIC1_IMR, 0xFF);
+    io_out8(PIC0_IMR, 0xF8);        // タイマー，キーボード，スレーブを許可
+    io_out8(PIC1_IMR, 0xEF);        // マウスを許可
     io_sti();
 
     DrawRectangle(0, 0, graphicsInfo->width, graphicsInfo->height, 0x000000);   // 画面を黒で塗りつぶす
