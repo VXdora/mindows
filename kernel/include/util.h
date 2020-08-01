@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows04a [Fix]
+ *      @update mindows04a
  ************************************************/
 
 #ifndef __UTIL__
