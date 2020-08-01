@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows02c
+ *      @update mindows04d [Fix]
  *********************************************/
 
 #ifndef __GRAPHICS__
@@ -23,6 +23,7 @@ typedef struct GraphicsInfo {
 void InitGraphics(void);
 
 // simple.c
+void DrawPoint(unsigned int px, unsigned int py, unsigned int color);
 void DrawLine(
         unsigned int sx, unsigned int sy,
         signed int width, signed int height,
