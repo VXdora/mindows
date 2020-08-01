@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows04b [New]
+ *      @update mindows04c [Fix]
  *******************************************************/
 
 #ifndef __DEVICE__
@@ -32,9 +32,15 @@
 
 // handler.S
 void AsmTimerHandler(void);
+void AsmKeyboardHandler(void);
 
 // timer.c
 void InitTimer(void);
+
+// keyboard.c
+void InitKeyboard(void);
+void WaitKeyboardSendReady(void);
+void KeyboardHandler(void);
 
 #endif  // __DEVICE__
 
