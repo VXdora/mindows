@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows03c [Fix]
+ *      @update mindows03c
  ******************************************************/
 
 #include <graphics.h>
