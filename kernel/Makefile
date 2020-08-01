@@ -11,7 +11,7 @@ CFLAGS = -Wall -Wextra -O0 -I include -nodefaultlibs -nostdlib -fno-builtin -fno
 LDFLAGS = -T scripts/kernel.ld
 
 OBJS = 	core/entry.obj core/main.obj \
-		device/handler.obj device/timer.obj device/keyboard.obj \
+		device/handler.obj device/timer.obj device/keyboard.obj device/mouse.obj \
 		graphics/init.obj graphics/simple.obj \
 		memory/gdtidt.obj memory/asm_gdtidt.obj memory/asm_fault.obj memory/fault.obj \
 		util/asmfunc.obj util/ctype.obj util/string.obj util/stdio.obj
