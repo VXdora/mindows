@@ -5,7 +5,7 @@
  *
  *      @author vxdora
  *
- *      @update mindows03c
+ *      @update mindows04b [Fix]
  *********************************************/
 
 #ifndef __MEMORY__
@@ -30,6 +30,7 @@ typedef struct GATE_DESCRIPTOR {
 void InitGdt(void);
 void InitIdt(void);
 GATE_DESCRIPTOR MakeGateDescriptor(unsigned long long addr);
+void InitPic(void);
 
 // asm_gdtidt.S
 void LoadGdt(void);
